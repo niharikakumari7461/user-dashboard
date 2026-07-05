@@ -140,11 +140,10 @@ function saveUser() {
   const email = document.getElementById("email").value;
   const department = document.getElementById("department").value;
 
-  if (!name || !email) {
-    alert("Please fill all fields");
-    return;
-  }
-
+ if (!name || !email) {
+  showToast("Please fill all fields ❌", "error");
+  return;
+}
   if (editId) {
     users = users.map(user =>
       user.id === editId
@@ -181,18 +180,16 @@ function editUser(id) {
 }
 
 function deleteUser(id) {
-  console.log("Deleting ID:", id);
-
-  if (!confirm("Delete user?")) return;
-
   users = users.filter(user => user.id != id);
 
   saveToLocalStorage();
 
-  filteredUsers = users; // important
+  filteredUsers = users;
   currentPage = 1;
 
   displayUsers(users);
+
+  showToast("User deleted successfully ✅", "success");
 }
 
 // 🔍 Search
@@ -260,6 +257,16 @@ function handleSort(value) {
 function resetData() {
   localStorage.clear();
   location.reload();
+}
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+
+  toast.innerText = message;
+  toast.className = `toast show ${type}`;
+
+  setTimeout(() => {
+    toast.className = "toast";
+  }, 3000);
 }
 
 // 🔹 Init
