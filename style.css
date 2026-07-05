@@ -334,3 +334,8 @@ button {
 .toast.error {
   background: #dc3545;
 }
+#scrollLoader {
+  margin: 20px;
+  font-weight: bold;
+  color: #555;
+}
