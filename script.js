@@ -174,7 +174,7 @@ function editUser(id) {
   const user = users.find(u => u.id === id);
 
   editId = id;
-
+document.getElementById("formTitle").innerText = "Edit User";
   document.getElementById("name").value = user.name;
   document.getElementById("email").value = user.email;
   document.getElementById("department").value = user.department || "";
