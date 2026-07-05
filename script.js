@@ -59,7 +59,10 @@ function paginateData(data) {
 // 🔹 Display Users (🔥 FIXED BUTTON ALIGNMENT)
 function displayUsers(data = users) {
   const container = document.getElementById("userContainer");
-  container.innerHTML = "";
+  
+  if (currentPage === 1) { //
+    container.innerHTML = "";
+  }
 
   filteredUsers = data;
 
@@ -266,7 +269,7 @@ function showToast(message, type = "success") {
 
   setTimeout(() => {
     toast.className = "toast";
-  }, 3000);
+  }, 2000);
 }
 
 // 🔹 Init
