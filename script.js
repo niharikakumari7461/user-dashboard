@@ -125,6 +125,8 @@ function changeRows(value) {
 function openForm() {
   editId = null;
 
+   document.getElementById("formTitle").innerText = "Add User";
+
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("department").value = "";
