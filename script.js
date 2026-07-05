@@ -46,7 +46,7 @@ async function fetchUsers() {
     displayUsers(users);
 
     hideLoader(); // OFF
-  }, 2000); // 🔥 2 sec delay
+  }, 1000); // 🔥 1 sec delay
 }
 
 // 🔹 Pagination Logic
