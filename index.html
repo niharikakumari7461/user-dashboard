@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>User Management Dashboard</h1>
+
+<!-- ✅ TOP CONTROL BAR -->
+<div class="top-bar">
+
+  <!-- LEFT SIDE -->
+  <div class="left-controls">
+    <button class="add-btn" onclick="openForm()">Add User</button>
+    <input type="text" id="search" placeholder="Search user...">
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-controls">
+
+    <!-- Sort -->
+    <select onchange="handleSort(this.value)">
+      <option value="">Sort</option>
+      <option value="name-asc">Name (A-Z)</option>
+      <option value="name-desc">Name (Z-A)</option>
+      <option value="email-asc">Email (A-Z)</option>
+      <option value="email-desc">Email (Z-A)</option>
+    </select>
+
+    <!-- Filter -->
+    <button onclick="openFilter()">Filter</button>
+
+    <!-- Rows -->
+    <select onchange="changeRows(this.value)">
+     
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+
+    <!-- Reset -->
+    <button class="reset-btn" onclick="resetData()">Reset</button>
+
+  </div>
+
+</div>
+
+<!-- ✅ USER LIST -->
+<div id="userContainer" class="user-container"></div>
+
+<!-- ✅ PAGINATION -->
+<div id="pagination" class="pagination"></div>
+
+<!-- ✅ ADD / EDIT FORM -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+
+    <h2 id="formTitle">Add User</h2>
+
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="department" placeholder="Department">
+
+    <div class="form-buttons">
+      <button onclick="saveUser()">Save</button>
+      <button onclick="closeForm()">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ✅ FILTER MODAL -->
+<div id="filterModal" class="modal">
+  <div class="modal-content">
+
+    <h3>Filter Users</h3>
+
+    <input type="text" id="filterName" placeholder="Name">
+    <input type="text" id="filterEmail" placeholder="Email">
+    <input type="text" id="filterDept" placeholder="Department">
+
+    <div class="form-buttons">
+      <button onclick="applyFilter()">Apply</button>
+      <button onclick="closeFilter()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
