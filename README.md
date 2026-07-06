@@ -1,8 +1,13 @@
-  # INTRODUCTION  
+ # INTRODUCTION  
 
 A modern and responsive **User Management Dashboard** built using **HTML, CSS, and JavaScript**. This project allows users to perform CRUD operations with additional features like search, filter, sorting, pagination, and local storage support.
 
-  # Features
+ # DEPLOYED WEBSITE 
+
+ https://remarkable-babka-bdd496.netlify.app/
+ 
+ 
+ # Features
 
 *  View list of users
 *  Add new users
@@ -87,6 +92,37 @@ user-dashboard/
 2. Open the project folder
 
 3. Run `index.html` in your browser
+
+
+
+    # USER DASHBOARD
+ <img width="1681" height="811" alt="image" src="https://github.com/user-attachments/assets/a391c738-9b49-4f0b-86c0-710c98eee65c" />
+  
+   # ADD USER
+   <img width="1692" height="797" alt="image" src="https://github.com/user-attachments/assets/c8c270a6-ca14-44b2-a017-6058e70f6cfa" />
+
+   # EDIT USER
+  <img width="1680" height="807" alt="image" src="https://github.com/user-attachments/assets/0210b00b-30e2-45b3-b1a2-bb112837d60c" />
+
+   # FILETER USER
+   <img width="1897" height="862" alt="image" src="https://github.com/user-attachments/assets/0673afb7-f880-4b0c-aeec-fff97896d9c6" />
+
+   # PAGINATION
+   <img width="1663" height="810" alt="image" src="https://github.com/user-attachments/assets/e9e5e885-70bd-420b-ac91-dc05f7f75ace" />
+
+   # SORT
+  <img width="1658" height="747" alt="image" src="https://github.com/user-attachments/assets/58bc43bf-7558-4825-a23e-be7f842d6b64" />
+
+   # MOBILE SCREEN
+   <img width="553" height="315" alt="image" src="https://github.com/user-attachments/assets/8148592e-937a-401d-99d4-424ef07f3190" />
+
+
+
+
+
+
+
+
 
 
 
