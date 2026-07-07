@@ -4,7 +4,7 @@ A modern and responsive **User Management Dashboard** built using **HTML, CSS, a
 
  # DEPLOYED WEBSITE 
 
- https://remarkable-babka-bdd496.netlify.app/
+https://chimerical-tulumba-35c56e.netlify.app/
  
  
  # Features
