@@ -72,6 +72,10 @@ function displayUsers(data = users) {
     const card = document.createElement("div");
     card.classList.add("user-card");
 
+    const colors = ["red", "green"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+card.classList.add(randomColor);
+
     card.innerHTML = `
       <h3>${user.name}</h3>
       <p><strong>ID:</strong> ${user.id}</p>
@@ -141,14 +145,23 @@ function closeForm() {
 
 // 🔹 Save User
 function saveUser() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
   const department = document.getElementById("department").value;
 
- if (!name || !email) {
-  showToast("Please fill all fields ❌", "error");
-  return;
-}
+  // ✅ Email validation regex
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!name || !email) {
+    showToast("Please fill all fields ❌", "error");
+    return;
+  }
+
+  if (!emailPattern.test(email)) {
+    showToast("Please enter valid email (example: abc@gmail.com) ❌", "error");
+    return;
+  }
+
   if (editId) {
     users = users.map(user =>
       user.id === editId
@@ -273,6 +286,7 @@ function showToast(message, type = "success") {
     toast.className = "toast";
   }, 2000);
 }
+
 
 // 🔹 Init
 fetchUsers();
