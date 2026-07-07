@@ -86,7 +86,7 @@ user-dashboard/
 1. Download or clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/user-dashboard.git
+   git clone https://chimerical-tulumba-35c56e.netlify.app/
    ```
 
 2. Open the project folder
